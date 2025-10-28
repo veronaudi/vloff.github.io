@@ -1,0 +1,68 @@
+/* Основной контейнер страницы */
+.main {
+  display: flex;
+  justify-content: center; /* центрируем контейнер на странице */
+  margin-top: 40px;
+}
+
+/* Контейнер карты и фильтров */
+.map-filters-container {
+  display: flex;
+  flex-direction: row;       /* карта и фильтры горизонтально */
+  align-items: flex-start;   /* выравнивание по верхней линии */
+  gap: 20px;
+  max-width: 1000px;
+}
+
+/* Обёртка карты */
+.map-wrapper {
+  width: 700px;             /* фиксированная ширина карты */
+  flex-shrink: 0;           /* не сжимается */
+}
+
+/* Карта */
+.yandex-map {
+  width: 100%;              /* растягиваем на ширину обёртки */
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Фильтры справа */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.filters span {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filters ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filters li {
+  margin: 0;
+}
+
+.filters button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.filters button:hover {
+  background-color: #e5e5e5;
+}
